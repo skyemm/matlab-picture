@@ -1,0 +1,17 @@
+x=[0,120,240,360,480,600,720,840,960,1080];
+y=[0,2.01,4.05,5.83,7.79,9.71,11.90,13.9,16.18,17.99];
+a=[0,0.88,1.31,2.15,2.72,3.37,3.71,4.41,4.77,5.29];
+b=[0,0.44,0.76,1.14,1.48,1.86,2.28,2.76,3.11,3.67];
+plot(x,y,'g*-','linewidth',1.2);
+hold on;
+plot(x,a,'bs-','linewidth',1.2);
+hold on;
+plot(x,b,'r^--','linewidth',1.2);
+grid on;
+h=legend('PSDG2','PSDG','SlotSwap');
+set(h,'Fontsize',12);
+xlabel('运行时间(s)','Fontsize',12,'Fontname','Times New Roma');
+ylabel('平均匿名熵','Fontsize',12,'Fontname','Times New Roma');
+axis([0 1200 0 20]);
+set(gca,'xtick',[0 120 240 360 480 600 720 840 960 1080 1200]);
+set(gca,'ytick',[0 5 10 15 20]);

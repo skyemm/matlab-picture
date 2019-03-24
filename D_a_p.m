@@ -1,0 +1,22 @@
+x=[100,200,300,400,500,600,700,800,900];
+y=[28.4817,14.07099,9.4758,5.3542,3.14925,1.8368,1.74016,1.5368,1.2895];
+a=[39.6579,16.8662,11.8979,7.2621,5.4881,4.2542,2.4366,2.2368,1.3895];
+b=[32.2487,27.8421,22.9507,21.6007,17.9593,14.5165,11.8363,9.5341,8.94253];
+c=[43.389,23.7354,19.3866,14.9456,10.8492,9.6779,6.3692,4.7884,4.4914];
+plot(x,y,'r*-','LineWidth',1.05,'markersize',5);
+hold on;
+plot(x,a,'bs-','linewidth',1.05,'markersize',5);
+hold on;
+plot(x,b,'mp--','linewidth',1.05,'markersize',5);
+hold on;
+plot(x,c,'cd-','linewidth',1.05,'markersize',5);
+grid on;
+h=legend('DPSZ','PSDN','SlotSwap','DLMP');
+set(h,'Fontsize',5);
+set(gca,'FontSize',12);
+xlabel('Number of vehicles','Fontsize',15,'Fontname','Times New Roman');
+ylabel('Being Tracked Prob(%)','Fontsize',15,'Fontname','Times New Roman');
+set(gca,'LooseInset',get(gca,'TightInset'))
+axis([100 900 0 50]);
+set(gca,'xtick',[100,200,300,400,500,600,700,800,900]);
+set(gca,'ytick',[0 10 20 30 40 50]);

@@ -1,0 +1,22 @@
+x=[0,200,400,600,800,1000,1200,1400,1600,1800];
+y=[100,18.64311,6.67099,4.532018,3.68168,2.968,2.05956,1.75956,1.25956,0.892289];
+a=[100,34.9363,19.65,10.64311,6.28403,4.17201,3.132018,3.08168,3.068,3.05956];
+b=[100,27.7598,14.80964,8.90988,4.50539,4.3254,4.30822,4.29035,3.98522,3.64607];
+c=[100,46.9988,25.7908,13.19292,7.93116,6.76976,5.75647,4.71077,3.6915,2.67412];
+plot(x,y,'r*-','LineWidth',1.05,'markersize',4.5);
+hold on;
+plot(x,a,'bs-','linewidth',1.05,'markersize',4.5);
+hold on;
+plot(x,b,'mp--','linewidth',1.05,'markersize',4.5);
+hold on;
+plot(x,c,'cd-','linewidth',1.05,'markersize',4.5);
+grid on;
+h=legend('DPSZ','PSDN','SlotSwap','DLMP');
+set(h,'Fontsize',5);
+set(gca,'FontSize',12);
+set(gca,'LooseInset',get(gca,'TightInset'))
+xlabel('Simulation Time(s)','Fontsize',15,'Fontname','Times New Roman');
+ylabel('Being Tracked Prob(%)','Fontsize',15,'Fontname','Times New Roman');
+axis([0 1800 0 100]);
+set(gca,'xtick',[0,200,400,600,800,1000,1200,1400,1600,1800]);
+set(gca,'ytick',[0 10 20 30 40 50 60 70 80 90 100]);

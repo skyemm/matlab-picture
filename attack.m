@@ -1,0 +1,22 @@
+x=[0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95];
+y=[19.3773,18.918,17.8182,16.6541,15.279,13.3,12.0531,10.7415,8.9127,6.0393];
+a=[12.8159,11.8756,11.86148,10.75237,9.4483,9.04978,8.046,7.3722,4.7365,3.08164];
+b=[10.1977,9.1381,8.6147,8.03577,7.94434,6.48246,6.0491,4.93172,3.59,1.76194];
+c=[9.53732,9.406,9.086,8.409,8.19598,7.87069,7.14322,6.01,4.15314,2.86648];
+plot(x,y,'r*-','LineWidth',1.05,'markersize',4.5);
+hold on;
+plot(x,a,'bs-','linewidth',1.05,'markersize',4.5);
+hold on;
+plot(x,b,'mp--','linewidth',1.05,'markersize',4.5);
+hold on;
+plot(x,c,'cd-','linewidth',1.05,'markersize',4.5);
+grid on;
+h=legend('DPSZ','PSDN','SlotSwap','DLMP');
+set(h,'Fontsize',5);
+set(gca,'FontSize',12);
+set(gca,'LooseInset',get(gca,'TightInset'))
+xlabel('Attack capability','Fontsize',15,'Fontname','Times New Roman');
+ylabel('Entropy','Fontsize',15,'Fontname','Times New Roman');
+axis([0.5 0.95 0 30]);
+set(gca,'xtick',[0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95]);
+set(gca,'ytick',[0 5 10 15 20 25 30]);

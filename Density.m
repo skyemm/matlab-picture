@@ -1,0 +1,22 @@
+x=[100,200,300,400,500,600,700,800,900];
+y=[5.20895,12.9684,15.638,19.794,22.7317,25.1273,25.7678,25.9746,26.4006];
+a=[4.14876,8.5489,11.9229,14.6099,17.7588,20.308,23.9788,25.4012,26.0897];
+b=[3.542,4.531,6.789,7.8617,9.131,10.5579,12.6791,13.8907,15.0403];
+c=[4.062,7.1389,8.3156,10.484,12.0694,14.9367,16.2226,18.32,19.6289];
+plot(x,y,'r*-','LineWidth',1.05,'markersize',5);
+hold on;
+plot(x,a,'bs-','linewidth',1.05,'markersize',5);
+hold on;
+plot(x,b,'mp--','linewidth',1.05,'markersize',5);
+hold on;
+plot(x,c,'cd-','linewidth',1.05,'markersize',5);
+grid on;
+h=legend('DPSZ','PSDN','SlotSwap','DLMP');
+set(h,'Fontsize',5);
+set(gca,'FontSize',12);
+set(gca,'LooseInset',get(gca,'TightInset'))
+xlabel('Number of vehicles','Fontsize',15,'Fontname','Times New Roman');
+ylabel('Entropy','Fontsize',15,'Fontname','Times New Roman');
+axis([100 900 0 35]);
+set(gca,'xtick',[100,200,300,400,500,600,700,800,900]);
+set(gca,'ytick',[0 5 10 15 20 25 30 35]);

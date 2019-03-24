@@ -1,0 +1,22 @@
+x=[0,200,400,600,800,1000,1200,1400,1600,1800];
+y=[0,5.14979,8.64081,10.4346,11.8288,13.2245,14.4681,15.6347,16.8383,18.4247];
+a=[0,1.73307,3.18291,4.96378,7.13812,9.1299,10.3331,11.8229,13.7127,15.5025];
+b=[0,1.7041,2.7075,3.6874,4.61084,5.5387,6.4666,7.3993,8.3224,9.2503];
+c=[0,1.2164,2.4121,3.7267,5.0975,6.4637,7.8571,8.9905,10.1514,11.4317];
+plot(x,y,'r*-','LineWidth',1.05,'markersize',4.5);
+hold on;
+plot(x,a,'bs-','linewidth',1.05,'markersize',4.5);
+hold on;
+plot(x,b,'mp--','linewidth',1.05,'markersize',4.5);
+hold on;
+plot(x,c,'cd-','linewidth',1.05,'markersize',4.5);
+grid on;
+h=legend('DPSZ','PSDN','SlotSwap','DLMP');
+set(h,'Fontsize',5);
+set(gca,'FontSize',12);
+set(gca,'LooseInset',get(gca,'TightInset'))
+xlabel('Simulation Time(s)','Fontsize',15,'Fontname','Times New Roman');
+ylabel('Entropy','Fontsize',15,'Fontname','Times New Roman');
+axis([0 1800 0 30]);
+set(gca,'xtick',[0,200,400,600,800,1000,1200,1400,1600,1800]);
+set(gca,'ytick',[0 5 10 15 20 25 30]);
